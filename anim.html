@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+    }
+
+    .celestial-body {
+      position: absolute;
+      border-radius: 50%;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    #sun {
+      width: 150px;
+      height: 150px;
+      background-color: yellow;
+      box-shadow: 0 0 30px 15px rgba(255, 255, 0, 0.7);
+    }
+
+    .planet {
+      width: 60px;
+      height: 60px;
+      box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7);
+    }
+
+    #earth {
+      background-color: #2e86c1;
+      animation: rotate-earth 10s linear infinite, orbit-earth 5s linear infinite;
+    }
+
+    #moon {
+      background-color: #f0f0f0;
+      animation: rotate-moon 3s linear infinite, orbit-moon 2s linear infinite;
+    }
+
+    #mercury {
+      background-color: #d4d2cd;
+      animation: rotate-mercury 4s linear infinite, orbit-mercury 3s linear infinite;
+    }
+
+    #venus {
+      background-color: #e5c39a;
+      animation: rotate-venus 8s linear infinite, orbit-venus 6s linear infinite;
+    }
+
+    #mars {
+      background-color: #d67e5a;
+      animation: rotate-mars 12s linear infinite, orbit-mars 8s linear infinite;
+    }
+
+    @keyframes rotate-earth {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes rotate-moon {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes rotate-mercury {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes rotate-venus {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes rotate-mars {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes orbit-earth {
+      from {
+        transform: translateX(200px) rotate(0deg);
+      }
+      to {
+        transform: translateX(200px) rotate(360deg);
+      }
+    }
+
+    @keyframes orbit-moon {
+      from {
+        transform: translateX(60px) rotate(0deg);
+      }
+      to {
+        transform: translateX(60px) rotate(360deg);
+      }
+    }
+
+    @keyframes orbit-mercury {
+      from {
+        transform: translateX(120px) rotate(0deg);
+      }
+      to {
+        transform: translateX(120px) rotate(360deg);
+      }
+    }
+
+    @keyframes orbit-venus {
+      from {
+        transform: translateX(280px) rotate(0deg);
+      }
+      to {
+        transform: translateX(280px) rotate(360deg);
+      }
+    }
+
+    @keyframes orbit-mars {
+      from {
+        transform: translateX(350px) rotate(0deg);
+      }
+      to {
+        transform: translateX(350px) rotate(360deg);
+      }
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        box-shadow: 0 0 20px 10px rgba(255, 255, 0, 0.7);
+      }
+      50% {
+        box-shadow: 0 0 30px 15px rgba(255, 255, 0, 0.9);
+      }
+    }
+
+    .glowing {
+      animation: glow 1.5s infinite alternate;
+    }
+  </style>
+</head>
+<body>
+  <div class="celestial-body" id="sun" class="glowing"></div>
+  <div class="celestial-body planet" id="mercury" class="glowing"></div>
+  <div class="celestial-body planet" id="venus" class="glowing"></div>
+  <div class="celestial-body planet" id="earth" class="glowing"></div>
+  <div class="celestial-body planet" id="mars" class="glowing"></div>
+  <div class="celestial-body" id="moon" class="glowing"></div>
+</body>
+</html>

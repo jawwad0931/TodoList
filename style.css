@@ -1,0 +1,17 @@
+body{
+    background-color: #5e0be5 !important;
+}
+.list-group-item{
+    text-align: start;
+    margin-top: 3px;
+}
+
+.span1{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    cursor: pointer;
+}
